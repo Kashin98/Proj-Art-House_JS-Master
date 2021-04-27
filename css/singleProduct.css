@@ -1,0 +1,71 @@
+@import url(./main.css);
+
+/* ---------------- Single Product PAGE-------------------- */
+
+.single-product img {
+  max-width: 900px;
+}
+.page-title {
+  font-family: var(--thin-font);
+}
+.product-title {
+  color: #414141b4;
+}
+.single-product-img {
+  border-radius: 5px;
+}
+.artist {
+  text-transform: capitalize;
+  font-family: var(--slanted-font);
+}
+.product-name {
+  font-family: var(--thin-font);
+}
+.product-price {
+  font-family: var(--remedy-font);
+  color: #2c2c2cb4;
+}
+.product-description {
+  font-family: var(--remedy-font);
+  width: 75%;
+}
+.buy-item {
+  font-family: var(--thin-font);
+  color: aliceblue;
+}
+.dot {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+@media (max-width: 1280px) {
+  .single-product {
+    flex-direction: column;
+    align-items: center;
+  }
+  .single-product .col-6 {
+    max-width: 90%;
+  }
+  .single-product .col-5 {
+    max-width: 89%;
+  }
+  .single-product img {
+    max-width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .page-title {
+    font-size: 1.8rem;
+  }
+  .product-name,
+  .artist,
+  .product-price {
+    font-size: 1.3rem;
+  }
+  .product-description {
+    font-size: 1rem;
+    width: 95%;
+  }
+}

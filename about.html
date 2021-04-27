@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap 4 -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <!-- FontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/76be54988d.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/" type="image/png" />
+    <title>Origins: Kashin's Art House</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/about.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar bg-dark navbar-expand-md">
+      <!-- Modal Navbar -->
+      <div class="nav-btn">
+        <button
+          class="navbar-toggler"
+          data-toggle="modal"
+          data-target="#modalOpen"
+        >
+          <i style="color: aliceblue" class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="./index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="./products.html" class="nav-link">Products</a>
+        </li>
+        <li class="nav-item">
+          <a href="./about.html" class="nav-link">About</a>
+        </li>
+      </ul>
+
+      <article class="navbar-brand text-center">
+        <img width="220px" src="./images/NavBrandCropped.png" alt="" />
+      </article>
+
+      <div class="toggle-cart">
+        <button class="shopping-cart btn">
+          <i class="fas fa-shopping-cart"></i>
+        </button>
+        <span class="cart-count">0</span>
+      </div>
+    </nav>
+
+    <header>
+      <!-- Modal -->
+      <!-- The complicated modal to make a toggleable navbutton was 
+    done cause I wanted to practice more Bootstrap functionality. -->
+      <section class="modal fade" id="modalOpen">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button class="close close-btn" data-dismiss="modal">
+                &times;
+              </button>
+            </div>
+            <div class="modal-body">
+              <ul class="list-unstyled">
+                <li>
+                  <a href="./index.html" class="nav-link"
+                    ><i class="fas fa-home px-2"></i>Home
+                  </a>
+                </li>
+                <li>
+                  <a href="./products.html" class="nav-link"
+                    ><i class="fas fa-paint-brush px-2"></i>Products</a
+                  >
+                </li>
+                <li>
+                  <a href="./about.html" class="nav-link"
+                    ><i class="fas fa-book-open px-2"></i> About</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cart -->
+      <section class="cart-setup">
+        <div class="cart">
+          <header class="align-items-start">
+            <div>
+              <button class="btn cart-close-btn">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <h2 class="text-center cart-heading">Your Cart</h2>
+          </header>
+          <!-- Main Cart Items -->
+          <article class="main-cart">
+            <!-- Single Cart Item -->
+
+            <!-- End of item -->
+          </article>
+
+          <!-- Footer -->
+          <footer class="text-center align-items-end">
+            <div class="my-5 pt-4">
+              <h3 class="cart-price">
+                Total: <span class="total-price">123</span>
+              </h3>
+              <button
+                style="font-size: 1.3rem; color: aliceblue"
+                class="btn bg-dark checkout px-4 mt-2"
+              >
+                Checkout
+              </button>
+            </div>
+          </footer>
+        </div>
+      </section>
+    </header>
+
+    <!-- CONTENT -->
+    <section class="pt-5 content">
+      <h1 class="page-title pl-4 pt-5 pb-3">
+        About /
+        <span style="color: #414141b4" class="text-capitalize"
+          >How Kashin's art house was made</span
+        >
+      </h1>
+      <!-- About -->
+      <article class="about m-4">
+        <!-- Para 1 -->
+        <h3 class="about-titles pt-2 pb-3">Starting The Project</h3>
+        <p class="about-descriptions">
+          This project was my Master JavaScript project to culminate everything
+          I have learned and apply them while creating something I could call my
+          own, something that was in my personal interest. So I started making
+          an E-Commerce store, but the theme would be based entirely on what I
+          would sell if I was a scuffed Bezos, so here we are
+          <span style="color: var(--pinkishred)" class="highlight-text"
+            >Kashin's <span style="color: lawngreen">Art</span>
+            <span style="color: aqua">House</span></span
+          >. <br />
+        </p>
+
+        <!-- Para 2 -->
+        <h3 class="about-titles pt-5 pb-3">Making It Happen</h3>
+        <p class="about-descriptions">
+          The project's idea was to create an art store and have it's products
+          be displayed using an API while having the functionality of adding
+          items to cart without using any PUT, POST, DELETE methods for API
+          calls. This idea required me to setup all cart functionality to work
+          through local storage and not require too much of a database with
+          multiple calls. <br />
+          But, my products (ARTWORK) still required a database for the API to
+          make calls from and at the least display the products from a database.
+          This required me to learn how to use
+          <span style="color: aqua" class="highlight-text">AirTable</span>.
+          Airtable gave me a so called data "base" along with their own API
+          setup to make calls and receive JSON data for items I setup. After a
+          few hours of learning AirTable Base setups and how to use AirTable
+          APIs using
+          <span style="color: #e94f37" class="highlight-text">Postman</span>, I
+          started building my Art-House. <br />
+        </p>
+        <h4 class="about-titles pt-5 pb-3">
+          Here is my Airtable Setup that is currently displaying all data on my
+          JS-Master Project.
+        </h4>
+        <div class="about-img">
+          <img width="100%" src="./images/Airtable About 1.png" alt="" />
+        </div>
+
+        <!-- Para 3 -->
+        <p class="about-descriptions pt-5">
+          The above setup was done on the AirTable Base where I have setup
+          multiple fields to send specific data like
+          <span style="color: lime" class="highlight-text"
+            >Artist, Color, Type</span
+          >
+          for each item on the base. The item is sent in clear JSON data from
+          the API that is provided by Airtable for free.
+          <br />
+        </p>
+        <h4 class="about-titles pt-5 pb-3">
+          Here is a much cleaner view of how the Airtable Art Gallery Base looks
+          like:
+        </h4>
+        <div class="about-img">
+          <img width="100%" src="./images/Airtable Gallery Setup.png" alt="" />
+        </div>
+
+        <!-- Para 4 -->
+        <h3 class="about-titles pt-5 pb-3">Working with Airtable API</h3>
+
+        <p class="about-descriptions">
+          The Airtable API is pretty straight forward to understand. Airtable
+          provides a special <span class="highlight-text">API key</span> along
+          with <span class="highlight-text">Base key</span> to setup for the API
+          calls. Each item is provided a specific ID which airtable will
+          retrieve if used in the API making the single product page possible.
+          <a class="about-link" target="_blank" href="https://airtable.com/api"
+            >Airtable API</a
+          >
+          <br />
+          Once the API was setup and I was getting my json data, the rest of the
+          site was just manipulating the JSON data to create a full setup. By
+          just sending all JSON data I received into local storage, I was able
+          to rely entirely on just local storage to retrieve and use all the
+          necessary data for cart functionality.
+        </p>
+
+        <!-- Para 5 -->
+        <h3 class="about-titles pt-5 pb-3">Rest of the website</h3>
+        <p class="about-descriptions">
+          The rest is just basic vanilla JS coding, but it all gets boring at
+          one point, so I created a small side project. For such special final
+          project, it required special attention. It was time to create my own
+          <span style="color: red" class="highlight-text"
+            >L<span style="color: lawngreen">O</span
+            ><span style="color: aqua">G</span
+            ><span style="color: violet">O</span></span
+          >. And so the nav-logo you see at the top of this website was created
+          using Photoshop, it was just a distraction to take my mind off the
+          hours of coding that became tedious at times.
+          <br />
+        </p>
+        <h4 class="about-titles pt-5 pb-3">
+          A look at the Logo fresh out the box
+        </h4>
+        <div class="about-img">
+          <img width="100%" src="./images/Navbrand ABOUT.png" alt="" />
+        </div>
+        <p class="about-descriptions py-5">
+          <span class="highlight-text">
+            It may not be the amazing design everyone was hoping for, but
+            everything looks better in your head until you try to make it a
+            reality.</span
+          >
+          <br />
+        </p>
+      </article>
+
+
+      <!-- Footer -->
+      <footer class="footer">
+        <h3 class="disclaimer font-weight-light text-center pt-2">
+          Kashin's Art House &#169; <span id="date"></span>
+
+          <br />
+          It Was Fun While It Lasted
+        </h3>
+        <article class="d-flex justify-content-center">
+          <a class="link" target="_blank" href="https://github.com/Kashin98"
+            ><i class="fab fa-github"></i>
+          </a>
+          <a
+            class="link"
+            target="_blank"
+            href="https://www.linkedin.com/in/karan-kumar-445304155/"
+            ><i class="fab fa-linkedin"></i>
+          </a>
+          <a
+            class="link"
+            target="_blank"
+            href="https://www.instagram.com/_kashin98/"
+            ><i class="fab fa-instagram"></i>
+          </a>
+        </article>
+      </footer>
+    </section>
+    </section>
+
+    <!-- Bootstrap JS -->
+  
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JS -->
+    <script type="text/javascript">
+      const date = document.getElementById("date");
+      const dateObject = new Date();
+      date.textContent = dateObject.getFullYear();
+    </script>
+  </body>
+</html>

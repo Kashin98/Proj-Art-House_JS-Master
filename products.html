@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap 4 -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <!-- FontAwesome -->
+    <script
+      src="https://kit.fontawesome.com/76be54988d.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/" type="image/png" />
+    <title>Art Gallery</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/products.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar bg-dark navbar-expand-md">
+      <!-- Modal Navbar -->
+      <div class="nav-btn">
+        <button
+          class="navbar-toggler"
+          data-toggle="modal"
+          data-target="#modalOpen"
+        >
+          <i style="color: aliceblue" class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="./index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="./products.html" class="nav-link">Products</a>
+        </li>
+        <li class="nav-item">
+          <a href="./about.html" class="nav-link">About</a>
+        </li>
+      </ul>
+
+      <article class="navbar-brand text-center">
+        <img width="220px" src="./images/NavBrandCropped.png" alt="" />
+      </article>
+
+      <div class="toggle-cart">
+        <button class="shopping-cart btn">
+          <i class="fas fa-shopping-cart"></i>
+        </button>
+        <span class="cart-count">0</span>
+      </div>
+    </nav>
+
+    <!-- Modal -->
+    <!-- The complicated modal to make a toggleable navbutton was 
+    done cause I wanted to practice more Bootstrap functionality. -->
+    <section class="modal fade" id="modalOpen">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close close-btn" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <ul class="list-unstyled">
+              <li>
+                <a href="./index.html" class="nav-link"
+                  ><i class="fas fa-home px-2"></i>Home
+                </a>
+              </li>
+              <li>
+                <a href="./products.html" class="nav-link"
+                  ><i class="fas fa-paint-brush px-2"></i>Products</a
+                >
+              </li>
+              <li>
+                <a href="./about.html" class="nav-link"
+                  ><i class="fas fa-book-open px-2"></i> About</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cart -->
+    <section class="cart-setup">
+      <div class="cart">
+        <header class="align-items-start">
+          <div>
+            <button class="btn cart-close-btn">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <h2 class="text-center cart-heading">Your Cart</h2>
+        </header>
+        <!-- Main Cart Items -->
+        <article class="main-cart">
+          <!-- Single Cart Item -->
+
+          <!-- End of item -->
+        </article>
+
+        <!-- Footer -->
+        <footer class="text-center align-items-end">
+          <div class="my-5 pt-4">
+            <h3 class="cart-price">
+              Total: <span class="total-price">123</span>
+            </h3>
+            <button
+              style="font-size: 1.3rem; color: aliceblue"
+              class="btn bg-dark checkout px-4 mt-2"
+            >
+              Checkout
+            </button>
+          </div>
+        </footer>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="content">
+      <section class="container-fluid d-flex products text-center py-5">
+        <!-- Filter  -->
+        <aside class="col-3 pt-5 filter-setup">
+          <h5 class="featured-header py-4">
+            <i class="fas fa-filter"></i>
+            Filter
+          </h5>
+          <div class="filters py-3">
+            <!-- Search -->
+            <div class="input-group search-bar py-3 pl-4 pr-2">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Search"
+                id="search"
+                name="search"
+              />
+              <div class="input-group-append align-items-center px-1">
+                <i class="fas fa-search"></i>
+              </div>
+            </div>
+            <div class="not-search-bar">
+              <!-- btn-filter -->
+              <div class="btn-filter-setup text-left">
+                <h5 class="filter-titles p-3 px-4">Categories</h5>
+                <ul class="list-unstyled px-2">
+                  <li>
+                    <button class="btn btn-filter">
+                      <i class="fas fa-images px-2"></i>All
+                    </button>
+                  </li>
+                  <li>
+                    <button class="btn btn-filter">
+                      <i class="fas fa-hat-wizard px-2"></i>Fantasy
+                    </button>
+                  </li>
+                  <li>
+                    <button class="btn btn-filter">
+                      <i class="fab fa-galactic-senate px-2"></i>Sci-Fi
+                    </button>
+                  </li>
+                  <li>
+                    <button class="btn btn-filter">
+                      <i class="fas fa-paint-brush px-2"></i>Art
+                    </button>
+                  </li>
+                  <li>
+                    <button class="btn btn-filter">
+                      <i class="fas fa-book-open px-2"></i>Cartoon
+                    </button>
+                  </li>
+                  <li>
+                    <button class="btn btn-filter">
+                      <i class="fas fa-city px-2"></i>City
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <!-- price-filter -->
+              <form class="price-form px-4 text-left">
+                <h5 class="filter-titles py-3">Price</h5>
+                <input
+                  type="range"
+                  width="80%"
+                  class="price-filter"
+                  min="10"
+                  value="100"
+                  max="100"
+                />
+                <h6 class="price-display">
+                  $ <span id="price-display">100</span>
+                </h6>
+              </form>
+              <!-- CARDS -->
+            </div>
+          </div>
+        </aside>
+
+        <!-- All Products -->
+        <article class="art-gallery col-9 text-center pt-5">
+          <h3 class="featured-header py-3 text-center">
+            <i class="fas fa-palette"></i>
+            Art Gallery
+          </h3>
+          <div class="card-deck product-deck p-3">
+            <!-- CARDS -->
+          </div>
+        </article>
+      </section>
+
+       <!-- Footer -->
+       <footer class="footer">
+        <h3 class="disclaimer font-weight-light text-center text-capitalize pt-2">
+          Kashin's Art House &#169; <span id="date"></span>
+          <br />
+          I don't own any of the art Displayed here.
+        </h3>
+        <article class="d-flex justify-content-center">
+          <a class="link" target="_blank" href="https://github.com/Kashin98"
+            ><i class="fab fa-github"></i>
+          </a>
+          <a
+            class="link"
+            target="_blank"
+            href="https://www.linkedin.com/in/karan-kumar-445304155/"
+            ><i class="fab fa-linkedin"></i>
+          </a>
+          <a
+            class="link"
+            target="_blank"
+            href="https://www.instagram.com/_kashin98/"
+            ><i class="fab fa-instagram"></i>
+          </a>
+        </article>
+      </footer>
+    </section>
+    </section>
+
+    <div class="page-loading">
+      <h1>Loading <i class="fas fa-palette fa-spin"></i></h1>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JS -->
+    <script type="module" src="./js/products.js"></script>
+  </body>
+</html>
