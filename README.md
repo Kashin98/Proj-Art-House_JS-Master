@@ -1,6 +1,6 @@
 # Proj-Art-House_JS-Master
 Master-Project-Art-House
-Building a project to fully apply everything learned in JavaScript. Also learned to use Airtable bases, Postman and more Bootstrap 4.
+Building a project to fully apply everything learned in JavaScript. Also learned to use Airtable bases and Airtable API, Postman and more Bootstrap 4.
 
 ## AWS CDN Link 
 
