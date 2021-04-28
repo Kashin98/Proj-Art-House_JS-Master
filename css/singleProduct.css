@@ -39,8 +39,8 @@
   border-radius: 50%;
   display: inline-block;
 }
-.fixed-bottom{
-  z-index:-5
+.fixed-bottom {
+  z-index: 5;
 }
 
 @media (max-width: 1280px) {

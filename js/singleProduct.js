@@ -62,7 +62,7 @@ window.addEventListener("DOMContentLoaded", async function () {
       );
 
       headingTitle.textContent = name;
-      pageTitle.textContent = `${name.toUpperCase()} - Art House`;
+      pageTitle.textContent = `${name.toUpperCase()} - Kashin's Art House`;
     } else {
       hero.innerHTML = `
       <div class="text-center">
