@@ -17,7 +17,7 @@ CDN - "https://d1vduo4iat34cx.cloudfront.net"
 ![Airtable-Setup](images/Airtable-Gallery-Setup.png)
 
 
-Learned how to:
+###Learned how to:
 
 1.) Apply all Javascript functionality to a website
 
