@@ -14,7 +14,7 @@ That is why entire website is being run over HTTP. This should not be an issue s
 
 This is the bucket's direct Endpoint "http://project-art-store-master.s3-website.ap-south-1.amazonaws.com" which is blocked. CDN link is below:
 
-CDN - "d1vduo4iat34cx.cloudfront.net"
+CDN - "https://d1vduo4iat34cx.cloudfront.net"
 
 Learned how to:
 
