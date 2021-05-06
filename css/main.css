@@ -14,6 +14,8 @@
 
 body {
   z-index: -2;
+  background: linear-gradient(90deg, #1616163f, #1616163d),
+    url("../images/bg.jpg") center/cover no-repeat fixed;
 }
 
 /* Nav Bar */
@@ -315,6 +317,23 @@ body {
   .cart-item-decrease,
   .cart-item-increase {
     font-size: 0.8rem;
+  }
+  /* Mobile browsers have a bug with fixed backgrounds that chrome has not fixed */
+  body {
+    background: linear-gradient(90deg, #1616163f, #1616163d),
+      url("../images/bg.jpg") top scroll;
+  }
+}
+@media (max-width: 400px) {
+  .featured .featured-header {
+    font-size: 1.6rem;
+  }
+  .shopping-cart,
+  .navbar-toggler {
+    font-size: 1.2rem;
+  }
+  .hero-intro {
+    font-size: 3rem;
   }
 }
 
