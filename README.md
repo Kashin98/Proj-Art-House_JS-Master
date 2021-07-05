@@ -4,6 +4,8 @@ Building a project to fully apply everything learned in JavaScript. Also learned
 
 ## AWS CDN Link 
 
+Hosted on AWS S3 using AWS Cloudfront service for a CDN. Redirecting all HTTP requests to HTTPS for secure conn.
+
 This is the bucket's direct Endpoint "http://project-art-store-master.s3-website.ap-south-1.amazonaws.com" which is blocked. CDN link is below:
 
 CDN - "https://d1vduo4iat34cx.cloudfront.net"
