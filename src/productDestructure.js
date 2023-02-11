@@ -9,8 +9,11 @@ const artStoreDestructure = (products) => {
       id,
       fields: { display, color, name, price, type, image: img },
     } = product;
-    const image = img[0].thumbnails.large.url;
-    return { display, id, color, name, price, type, image };
+    let image = "";
+    if (price && name && img && img.length > 0) {
+      image = img[0].thumbnails.large.url;
+      return { display, id, color, name, price, type, image };
+    }
   });
   setStoredProducts("allProducts", destructuredProducts);
 };
