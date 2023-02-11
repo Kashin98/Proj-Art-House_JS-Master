@@ -16,7 +16,9 @@ const loadProducts = async () => {
   if (products) {
     artStoreDestructure(products.records);
     const mainDisplay = destructuredProducts.filter((displayProduct) => {
-      return displayProduct.display === "yes";
+      if (displayProduct) {
+        return displayProduct.display === "yes";
+      }
     });
     displayProducts(mainDisplay, featuredDeck);
   }

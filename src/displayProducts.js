@@ -3,8 +3,9 @@ import { addToCartJS } from "./setupCart.js";
 const displayProducts = (mainProduct, element) => {
   element.innerHTML = mainProduct
     .map((product) => {
-      const { id, name, price, type, image } = product;
-      return `<div style="max-width: 600px" class="card product-card" data-type="${type}">
+      if (product) {
+        const { id, name, price, type, image } = product;
+        return `<div style="max-width: 600px" class="card product-card" data-type="${type}">
                 <div class="card img">
                   <img
                     src="${image}"
@@ -24,8 +25,8 @@ const displayProducts = (mainProduct, element) => {
                   <h5 class="card-title">${name}</h5>
                   <p class="card-text">&dollar; <span class="card-price">${price}</span></p>
                 </div>
-              </div>
-`;
+              </div>`;
+      }
     })
     .join("");
   element.addEventListener("click", (e) => {
