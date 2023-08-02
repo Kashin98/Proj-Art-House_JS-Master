@@ -10,6 +10,8 @@ This is the bucket's direct Endpoint "http://project-art-store-master.s3-website
 
 CDN - "https://d1vduo4iat34cx.cloudfront.net"
 
+(ALL AWS SERVICES ARE DISABLED, Hosting on netlify only)
+
 Netlify - "https://proj-kashin-art-house.netlify.app"
 
 ## The Airtable Data "Base" setup 
